@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+	<packageId>WorldNuker.advanced-diseases</packageId>
+	<name>Advanced Diseases</name>
+	<author>WorldNuker</author>
+	<description>The short mod that overhauls and reworks diseases, making them more lasting and realistic.</description>
+	
+	<supportedVersions>
+	<li>1.6</li>
+	</supportedVersions>
+	
+	<modVersion IgnoreIfNoMatchingField="True">0.0.1</modVersion>
+	
+
+</ModMetaData>
