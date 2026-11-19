@@ -12,7 +12,6 @@
 		<maxSeverity>1.0</maxSeverity>
 		<chanceToCauseNoPain>0.3</chanceToCauseNoPain>
 		<duplicationAllowed>true</duplicationAllowed>
-		<tendable>false</tendable>
 		<comps>
 			<li Class="HediffCompProperties_Discoverable">
 				<sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
@@ -35,17 +34,15 @@
 		<stages>
 			<li>
 				<label>T1a-initial</label>
-				<becomeVisible>false</becomeVisible>
 			</li>
 			<li>
 				<minSeverity>0.20</minSeverity>
-				<becomeVisible>false</becomeVisible>
 				<label>T1b-small</label>
 				<hediffGivers>
 					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
 						<hediff>NodalCarcinoma</hediff>
 						<severityAmount>0.01</severityAmount>
-						<mtbHours>10000</mtbHours>
+						<mtbHours>1000</mtbHours>
 					</li>
 				</hediffGivers>
 			</li>
@@ -58,7 +55,7 @@
 					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
 						<hediff>NodalCarcinoma</hediff>
 						<severityAmount>0.01</severityAmount>
-						<mtbHours>1000</mtbHours>
+						<mtbHours>100</mtbHours>
 					</li>
 				</hediffGivers>
 			</li>
@@ -70,7 +67,7 @@
 				<hediffGivers>
 					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
 						<hediff>NodalCarcinoma</hediff>
-						<severityAmount>0.01</severityAmount>
+						<severityAmount>0.02</severityAmount>
 						<mtbHours>100</mtbHours>
 					</li>
 				</hediffGivers>
@@ -101,8 +98,8 @@
 					</li>
 					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
 						<hediff>SystemicIntoxication</hediff>
-						<severityAmount>0.05</severityAmount>
-						<mtbHours>4</mtbHours>
+						<severityAmount>0.015</severityAmount>
+						<mtbHours>1</mtbHours>
 					</li>
 				</hediffGivers>
 			</li>

@@ -31,7 +31,7 @@
 				<hediffGivers>
 					<li Class="AdvancedDiseases.HediffGiver_RandomSilent">
 						<hediff>Carcinoma</hediff>
-						<mtbDays>100</mtbDays>
+						<mtbDays>80</mtbDays>
 						<canAffectAnyLivePart>true</canAffectAnyLivePart>
 					</li>
 				</hediffGivers>
@@ -44,7 +44,7 @@
 				<hediffGivers>
 					<li Class="AdvancedDiseases.HediffGiver_RandomSilent">
 						<hediff>Carcinoma</hediff>
-						<mtbDays>50</mtbDays>
+						<mtbDays>20</mtbDays>
 						<canAffectAnyLivePart>true</canAffectAnyLivePart>
 					</li>
 				</hediffGivers>
@@ -58,7 +58,7 @@
 				<hediffGivers>
 					<li Class="AdvancedDiseases.HediffGiver_RandomSilent">
 						<hediff>Carcinoma</hediff>
-						<mtbDays>10</mtbDays>
+						<mtbDays>5</mtbDays>
 						<canAffectAnyLivePart>true</canAffectAnyLivePart>
 					</li>
 				</hediffGivers>
