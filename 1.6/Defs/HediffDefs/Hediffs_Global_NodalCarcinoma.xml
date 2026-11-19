@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>NodalCarcinoma</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1, 0.3, 0.3)</defaultLabelColor>
+		<label>Nodal Spread</label>
+		<description>Medical condition rising from an untreated carcinoma. Immune system of the pawn has been infested by the carcinoma. Metastases are now a question of time. This condition, sadly, cannot be treated, but can be held at bay by removing carcinomas.</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<initialSeverity>0.05</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<duplicationAllowed>false</duplicationAllowed>
+		  <comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.001</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>N0</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<label>N1</label>
+				<minSeverity>0.3</minSeverity>
+				<restFallFactor>1.2</restFallFactor>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_RandomSilent">
+						<hediff>Carcinoma</hediff>
+						<mtbDays>100</mtbDays>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<label>N2</label>
+				<minSeverity>0.6</minSeverity>
+				<restFallFactor>1.3</restFallFactor>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_RandomSilent">
+						<hediff>Carcinoma</hediff>
+						<mtbDays>50</mtbDays>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<label>N3</label>
+				<minSeverity>0.9</minSeverity>
+				<restFallFactor>1.5</restFallFactor>
+				<hungerRateFactorOffset>2</hungerRateFactorOffset>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_RandomSilent">
+						<hediff>Carcinoma</hediff>
+						<mtbDays>10</mtbDays>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

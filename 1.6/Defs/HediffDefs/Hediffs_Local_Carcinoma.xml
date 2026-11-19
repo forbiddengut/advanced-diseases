@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Carcinoma</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>carcinoma</label>
+		<description>A lump of cancerous tissue. Without treatment, the carcinoma will grow over time, causing worsening symptoms and eventually killing the patient.
+\nA skilled doctor can excise the carcinoma. An unskilled doctor may be able to simply amputate the body part which contains the carcinoma.</description>
+		<labelNoun>a carcinoma</labelNoun>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<chanceToCauseNoPain>0.3</chanceToCauseNoPain>
+		<duplicationAllowed>true</duplicationAllowed>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
+			</li>
+		</comps>
+		<comps>
+			<li Class="HediffCompProperties_GrowthMode">
+				<severityPerDayGrowing>0.003</severityPerDayGrowing>
+				<severityPerDayRemission>-0.002</severityPerDayRemission>
+				<severityPerDayGrowingRandomFactor>
+					<min>0.35</min>
+					<max>1.65</max>
+				</severityPerDayGrowingRandomFactor>
+				<severityPerDayRemissionRandomFactor>
+					<min>0.65</min>
+					<max>1.35</max>
+				</severityPerDayRemissionRandomFactor>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>T1a-initial</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.20</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<label>T1b-small</label>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
+						<hediff>NodalCarcinoma</hediff>
+						<severityAmount>0.01</severityAmount>
+						<mtbHours>10000</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.40</minSeverity>
+				<label>T2-moderate</label>
+				<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+				<painOffset>0.05</painOffset>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
+						<hediff>NodalCarcinoma</hediff>
+						<severityAmount>0.01</severityAmount>
+						<mtbHours>1000</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.60</minSeverity>
+				<label>T3-big</label>
+				<partEfficiencyOffset>-0.8</partEfficiencyOffset>
+				<painOffset>0.1</painOffset>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
+						<hediff>NodalCarcinoma</hediff>
+						<severityAmount>0.01</severityAmount>
+						<mtbHours>100</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.80</minSeverity>
+				<label>T4-large</label>
+				<partEfficiencyOffset>-0.9</partEfficiencyOffset>
+				<painOffset>0.15</painOffset>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
+						<hediff>NodalCarcinoma</hediff>
+						<severityAmount>0.03</severityAmount>
+						<mtbHours>100</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.95</minSeverity>
+				<label>T4-huge</label>
+				<partEfficiencyOffset>-0.95</partEfficiencyOffset>
+				<painOffset>0.2</painOffset>
+				<hediffGivers>
+					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
+						<hediff>NodalCarcinoma</hediff>
+						<severityAmount>0.05</severityAmount>
+						<mtbHours>100</mtbHours>
+					</li>
+					<li Class="AdvancedDiseases.HediffGiver_AddSeveritySilent">
+						<hediff>SystemicIntoxication</hediff>
+						<severityAmount>0.05</severityAmount>
+						<mtbHours>4</mtbHours>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
